@@ -125,11 +125,11 @@ alias nocshell="nohup qs -c noctalia-shell"
 alias noct="nohup noctalia"
 alias atmoshell="nohup atmosphera run"
 alias iii="nohup qs -c ii"
-alias iioops="nohup qs -c home/intfd/Projects/ILLOGICAL_OOPS/quickshell"
+alias iioops="nohup qs -c ii"
 alias e4="nohup qs -c end4-pC"
 alias p3="nohup qs -c p3drofx"
 # ==============================================================================
-alias own="sudo chown -R intfd:intfd "
+alias own="sudo chown -R \$USER:\$USER "
 alias exe="chmod +x "
 alias group="sudo usermod -aG "
 #         ~~~~~~~~~~~~~~~~
@@ -142,7 +142,6 @@ alias ivlyrics="curl -fsSL https://ivlis.kr/ivLyrics/install.sh | bash"
 alias zquick="cd ~/.config/quickshell/"
 alias zspot="cd ~/.config/spicetify/"
 alias zconf="cd ~/.config/"
-alias ztopencodeproj= "cd /mnt/TOSHIBA/opencode projects"
 # ==============================================================================
 alias scx-lavd="scxctl switch --sched lavd --mode auto"
 alias scx-rusty="scxctl switch --sched rusty --mode auto"
@@ -157,10 +156,10 @@ alias wifi-pci-down="sudo ip link set wlan0 down"
 alias wifi?="nmcli device"
 
 zoxide init fish | source
-fish_add_path /home/intfd/.spicetify
+test -d ~/.spicetify; and fish_add_path ~/.spicetify
 export XDG_CURRENT_DESKTOP=Hyprland
 export XDG_SESSION_TYPE=wayland
 
 ## Nebula shell
-set -gx NEBULA_VENV "/home/intfd/.local/state/quickshell/.venv"
+test -d "$HOME/.local/state/quickshell/.venv"; and set -gx NEBULA_VENV "$HOME/.local/state/quickshell/.venv"
 ## set -gx QML_IMPORT_PATH "$HOME/.local/lib/qt6/qml" $QML_IMPORT_PATH

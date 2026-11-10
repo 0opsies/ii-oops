@@ -60,9 +60,3 @@ ToolButtonStyle=IconOnly
 
 [UiSettings]
 ColorScheme=KanagawaDragon
-
-[kuick-copy]
-Paths[$e]=/mnt/TOSHIBA/Film and TV/Thriller/
-
-[kuick-move]
-Paths[$e]=/run/media/intfd/Seagate/sticky/amoi/trib/,$HOME/Pictures/Screenshots/,/mnt/TOSHIBA/Games/,/mnt/kingston/HeroicGamesLibrary/,/run/media/intfd/Seagate/Games/

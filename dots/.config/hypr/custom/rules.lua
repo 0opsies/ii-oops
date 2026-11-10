@@ -110,8 +110,6 @@ hl.window_rule({ match = { class = "^(com\\.saivert\\.pwvucontrol)$" }, opacity 
 hl.window_rule({ match = { class = "^(dolphin)$" }, float = true, center = true, opacity = "0.78", size = "1062 644" })  --@r app:dolphin
 hl.window_rule({ match = {} })                                                  --@r win:1
 hl.window_rule({ match = { class = "^(xdg-desktop-portal-gtk)$" }, float = true, center = true })  --@r app:xdg-desktop-portal-gtk
-hl.window_rule({ match = { class = "^(vivaldi-agimnkijcaahngcdmfeangaknmldooml-Profile_1)$", fullscreen = 1, workspace = "6" }, workspace = "6", idle_inhibit = "focus" })  --@r app:vivaldi-agimnkijcaahngcdmfeangaknmldooml
-hl.window_rule({ match = { class = "^(vivaldi-ibokhhgiboeeojjdojiajjcelfclfjgg-Profile_1)$", workspace = "7", fullscreen = 1 }, workspace = "7" })  --@r app:vivaldi-ibokhhgiboeeojjdojiajjcelfclfjgg
 hl.window_rule({ match = { class = "^(org\\.quickshell)$", title = "ii Clock" }, float = true, center = true })  --@r app:org-quickshell
 hl.window_rule({ match = { class = "^(org\\.gnome\\.Loupe)$" }, size = "1378 795", float = true, center = true })  --@r app:org-gnome-loupe
 hl.window_rule({ match = { class = "^(floorp)$", title = "Extension: (Bitwarden Password Manager) - Bitwarden — Floorp" }, float = true })  --@r app:firedragon

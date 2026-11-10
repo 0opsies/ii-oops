@@ -72,7 +72,7 @@ pcall(hl.unbind, "SUPER + SHIFT + B")                                           
 pcall(hl.unbind, "SUPER + ALT + M")                                             --@u SUPER+ALT+m
 pcall(hl.unbind, "SUPER + SHIFT + P")                                           --@u SUPER+SHIFT+p
 pcall(hl.unbind, "CTRL + code:51")                                              --@u CTRL+code:51
-hl.bind("CTRL + code:51", hl.dsp.exec_cmd("/home/intfd/.config/hypr/custom/scripts/OverviewToggle.sh "))  --@b CTRL+code:51
+hl.bind("CTRL + code:51", hl.dsp.exec_cmd("~/.config/hypr/custom/scripts/OverviewToggle.sh "))  --@b CTRL+code:51
 pcall(hl.unbind, "CTRL + SUPER + SHIFT + Tab")                                  --@u CTRL+SUPER+SHIFT+tab
 pcall(hl.unbind, "ALT + Space")                                                 --@u ALT+space
 hl.bind("ALT + Space", hl.dsp.window.float({ action = "toggle" }), { description = "Window: Float/Tile" })  --@b ALT+space
