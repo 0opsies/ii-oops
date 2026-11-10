@@ -1,18 +1,68 @@
+MenuBar=Disabled
+
+[ContentDisplay]
+DirectorySizeMode=ContentSize
+
+[ContextMenu]
+ShowAddToPlaces=false
+ShowCopyMoveMenu=true
+ShowCopyToOtherSplitView=false
+ShowMoveToOtherSplitView=false
+ShowViewMode=false
+
 [DetailsMode]
+LeftPadding=0
 PreviewSize=32
+RightPadding=0
+
+[ExtractDialog]
+2 screens: Window-Maximized=true
 
 [General]
+AutoExpandFolders=true
+BrowseThroughArchives=true
+DynamicView=true
+EditableUrl=true
+FilterBar=true
 GlobalViewProps=false
-ShowFullPath=true
+LockPanels=false
+RememberOpenedTabs=false
+ShowFullPathInTitlebar=true
 ShowStatusBar=FullWidth
+ShowZoomSlider=true
+SingleClick=true
+SortingChoice=CaseSensitiveSorting
+UrlCompletionMode=5
 Version=202
 
 [KFileDialog Settings]
-Places Icons Auto-resize=false
+Places Icons Auto-resize=true
 Places Icons Static Size=22
 
 [MainWindow]
-MenuBar=Disabled
+ToolBarsMovable=Enabled
+
+[Notification Messages]
+warnAboutRisksBeforeActingAsAdmin=false
+
+[PlacesPanel]
+IconSize=-1
 
 [PreviewSettings]
-Plugins=ffmpegthumbnailer,appimagethumbnail,audiothumbnail,avif,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,heif,imagethumbnail,jpegthumbnail,jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,mobithumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,librsvg,svgthumbnail,ffmpegthumbs,gdk-pixbuf-thumbnailer,gsf-office
+Plugins=ffmpegthumbnailer,glycin-image-rs,appimagethumbnail,audiothumbnail,glycin-heif,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,glycin-jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,mobithumbnail,opendocumentthumbnail,xreader,gsthumbnail,rawthumbnail,ffmpegthumbnailer-audio,glycin-svg,svgthumbnail,textthumbnail,ffmpegthumbs,webp-pixbuf,gsf-office
+
+[Shortcuts]
+open_terminal=F4
+show_terminal_panel=none
+
+[Toolbar mainToolBar]
+ToolButtonStyle=IconOnly
+
+[UiSettings]
+ColorScheme=KanagawaDragon
+
+[kuick-copy]
+Paths[$e]=/mnt/TOSHIBA/Film and TV/Thriller/
+
+[kuick-move]
+Paths[$e]=/run/media/intfd/Seagate/sticky/amoi/trib/,$HOME/Pictures/Screenshots/,/mnt/TOSHIBA/Games/,/mnt/kingston/HeroicGamesLibrary/,/run/media/intfd/Seagate/Games/

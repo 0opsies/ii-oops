@@ -9,9 +9,13 @@ import qs.services
 GridLayout {
     id: root
 
-    readonly property var validPositions: ["top_left", "top_right", "bottom_left", "bottom_right"]
+    readonly property var validPositions: ["top_left", "top_center", "top_right", "bottom_left", "bottom_center", "bottom_right"]
     readonly property string configuredPosition: Config.options.notifications.position ?? "top_right"
-    readonly property string selectedPosition: validPositions.includes(configuredPosition) ? configuredPosition : "top_right"
+    readonly property string selectedPosition: {
+        if (configuredPosition === "top") return "top_center";
+        if (configuredPosition === "bottom") return "bottom_center";
+        return validPositions.includes(configuredPosition) ? configuredPosition : "top_right";
+    }
 
     columns: width >= Appearance.font.pixelSize.hugeass * 21 ? 2 : 1
     columnSpacing: Appearance.font.pixelSize.small
@@ -20,8 +24,10 @@ GridLayout {
     Repeater {
         model: [
             { "label": Translation.tr("Top left"), "icon": "north_west", "value": "top_left" },
+            { "label": Translation.tr("Top center"), "icon": "north", "value": "top_center" },
             { "label": Translation.tr("Top right"), "icon": "north_east", "value": "top_right" },
             { "label": Translation.tr("Bottom left"), "icon": "south_west", "value": "bottom_left" },
+            { "label": Translation.tr("Bottom center"), "icon": "south", "value": "bottom_center" },
             { "label": Translation.tr("Bottom right"), "icon": "south_east", "value": "bottom_right" }
         ]
 
@@ -83,7 +89,7 @@ GridLayout {
                             Layout.fillWidth: true
                             text: positionChoice.selected
                                 ? Translation.tr("Current position")
-                                : Translation.tr("Choose this corner")
+                                : Translation.tr("Choose this position")
                             font.pixelSize: Appearance.font.pixelSize.small
                             font.weight: Font.Medium
                             color: positionChoice.selected

@@ -42,14 +42,15 @@ Scope {
 
         property string position: {
             const raw = Config.options.notifications.position ?? "top_right"
-            if (raw === "top") return "top_right"
-            if (raw === "bottom") return "bottom_right"
+            if (raw === "top") return "top_center"
+            if (raw === "bottom") return "bottom_center"
             return raw
         }
         property bool isTop: position.startsWith("top")
         property bool isBottom: position.startsWith("bottom")
         property bool isLeft: position.endsWith("left")
         property bool isRight: position.endsWith("right")
+        property bool isCenter: position.endsWith("center")
 
         WlrLayershell.namespace: "quickshell:notificationPopup"
         WlrLayershell.layer: WlrLayer.Overlay
@@ -138,6 +139,18 @@ Scope {
                     }
                 },
                 State {
+                    name: "top_center"
+                    when: root.position === "top_center"
+                    AnchorChanges {
+                        target: listview
+                        anchors.left: undefined
+                        anchors.right: undefined
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        anchors.top: parent.top
+                        anchors.bottom: undefined
+                    }
+                },
+                State {
                     name: "top_right"
                     when: root.position === "top_right"
                     AnchorChanges {
@@ -157,6 +170,18 @@ Scope {
                         anchors.left: parent.left
                         anchors.right: undefined
                         anchors.horizontalCenter: undefined
+                        anchors.top: undefined
+                        anchors.bottom: parent.bottom
+                    }
+                },
+                State {
+                    name: "bottom_center"
+                    when: root.position === "bottom_center"
+                    AnchorChanges {
+                        target: listview
+                        anchors.left: undefined
+                        anchors.right: undefined
+                        anchors.horizontalCenter: parent.horizontalCenter
                         anchors.top: undefined
                         anchors.bottom: parent.bottom
                     }

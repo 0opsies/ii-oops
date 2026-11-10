@@ -69,7 +69,7 @@ Scope {
                 },
                 State {
                     name: "top"
-                    when: root.position === "top"
+                    when: root.position === "top" || root.position === "top_center"
                     AnchorChanges {
                         target: listview
                         anchors.left: undefined
@@ -105,7 +105,7 @@ Scope {
                 },
                 State {
                     name: "bottom"
-                    when: root.position === "bottom"
+                    when: root.position === "bottom" || root.position === "bottom_center"
                     AnchorChanges {
                         target: listview
                         anchors.left: undefined
